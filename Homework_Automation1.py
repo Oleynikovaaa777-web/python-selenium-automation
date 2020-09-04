@@ -94,11 +94,12 @@ driver.get('https://www.amazon.com//')
 
 
 
-search = driver.find_element(By.XPATH, '//input[@id="gh-ac"]')
+Help = driver.find_element(By.XPATH, "//*[text()='Help']")
+Help.click()
+search = driver.find_element(By.XPATH, "//input[@type='search']")
 search.clear()
-search.send_keys('iPhone')
-search_button = driver.find_element(By.XPATH, '//input[@id="gh-btn"]')
-search_button.click()
+search.send_keys('Cancel order')
+search()
 
 sleep(5)
 
@@ -106,17 +107,18 @@ sleep(5)
 
 
 
-# login = driver.find_element(By.XPATH,'//span[@id="gh-ug"]//a[text()="Sign in"]')
-
-
-
-
-# login.click()
-
-
-
-# wait for 4 sec
-sleep(4)
+# Go to amazon
+#
+#
+# Help_button=$x("//*[text()='Help']")
+#
+# Help_button.click()
+#
+# Search = $x("//input[@type='search']")
+#
+# search.send_keys('Cancel order')
+#
+# Click
 
 
 
