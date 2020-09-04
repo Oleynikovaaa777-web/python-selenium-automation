@@ -99,7 +99,7 @@ Help.click()
 search = driver.find_element(By.XPATH, "//input[@type='search']")
 search.clear()
 search.send_keys('Cancel order')
-search()
+search.click()
 
 sleep(5)
 
