@@ -79,29 +79,29 @@
 # $x("//*[text()='Privacy Notice']")
 
 
-
-
-
-from time import sleep
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-# init driver
-driver = webdriver.Chrome()
-
-# open the url
-driver.get('https://www.amazon.com//')
-
-
-
-Help = driver.find_element(By.XPATH, "//*[text()='Help']")
-Help.click()
-search = driver.find_element(By.XPATH, "//input[@type='search']")
-search.clear()
-search.send_keys('Cancel order')
-search.click()
-
-sleep(5)
+#
+# # Test_case1
+#
+# from time import sleep
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+#
+# # init driver
+# driver = webdriver.Chrome()
+#
+# # open the url
+# driver.get('https://www.amazon.com//')
+#
+#
+#
+# Help = driver.find_element(By.XPATH, "//*[text()='Help']")
+# Help.click()
+# search = driver.find_element(By.XPATH, "//input[@type='search']")
+# search.clear()
+# search.send_keys('cancel order')
+# search.click()
+#
+# sleep(5)
 
 
 
@@ -118,8 +118,29 @@ sleep(5)
 #
 # search.send_keys('Cancel order')
 #
-# Click
 
 
 
-driver.quit()
+#
+# driver.quit()
+
+
+
+# Test Case 2
+
+
+
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+# init driver
+driver = webdriver.Chrome()
+
+# open the url
+driver.get('https://www.amazon.com//')
+
+
+Return_Orders_Button = driver.find_element(By.XPATH,"//*[text()='Returns']")
+Return_Orders_Button.click()
+
