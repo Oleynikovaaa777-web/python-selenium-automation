@@ -22,32 +22,27 @@ best_sellers.click()
 product = driver.find_element(By.XPATH,"//img[@alt='Echo Dot (3rd Gen) - Smart speaker with Alexa - Charcoal']")
 product.click()
 
-add_to_cart =
+add_to_cart = driver.find_element(By.XPATH,"//input[@id='add-to-cart-button']")
+add_to_cart.click()
+
+# continue_button = driver.find_element(By.XPATH, "//span[@id='a-autoid-20-announce']")
+# continue_button.click()
+
+cancel_button = driver.find_element(By.XPATH, "//i[@class='a-icon a-icon-close']")
+cancel_button.click()
 
 
-
-#
-# cart = driver.find_element(By.XPATH,"//a[@id='nav-cart']")
-# cart.click()
-
-
-# search = driver.find_element(By.NAME, 'q')
-# search.clear()
-# search.send_keys('Dress')
-#
-# # wait for 4 sec
-# sleep(4)
-
-
-
-# empty_cart= driver.find_element(By.XPATH,"//div[h2]")
+cart_subtotal = driver.find_element(By.XPATH,  "//div[h1]")
 
 
 
 
 
-# assert 'Your Shopping Cart is empty' in empty_cart.text, \
-#     f'Expected \Your Shopping Cart is empty', but got {empty_cart.text}'
+
+
+
+# assert 'Added to Cart' in empty_cart.text, \
+#     f'Expected \Your Shopping Cart is empty', but got {cart_subtotal.text}'
 
 
 
