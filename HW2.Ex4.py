@@ -25,24 +25,26 @@ product.click()
 add_to_cart = driver.find_element(By.XPATH,"//input[@id='add-to-cart-button']")
 add_to_cart.click()
 
-# continue_button = driver.find_element(By.XPATH, "//span[@id='a-autoid-20-announce']")
-# continue_button.click()
 
-cancel_button = driver.find_element(By.XPATH, "//i[@class='a-icon a-icon-close']")
-cancel_button.click()
+continue_button = driver.find_element(By.XPATH, "//span[@id='a-autoid-20-announce']")
+continue_button.click()
 
-
-cart_subtotal = driver.find_element(By.XPATH,  "//div[h1]")
+# cancel_button = driver.find_element(By.XPATH, "//button[@aria-label='Close']")
+# cancel_button.click()
 
 
-
-
-
-
-
-
-# assert 'Added to Cart' in empty_cart.text, \
-#     f'Expected \Your Shopping Cart is empty', but got {cart_subtotal.text}'
+#
+# cart_subtotal = driver.find_element(By.XPATH,  "//div[h1]")
+#
+#
+#
+#
+#
+#
+#
+#
+# assert 'Added to Cart' in cart_subtotal.text, \
+#     f'Expected \Your Shopping Cart is empty, but got {cart_subtotal.text}'
 
 
 
