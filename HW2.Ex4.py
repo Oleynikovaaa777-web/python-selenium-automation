@@ -25,13 +25,16 @@ product.click()
 add_to_cart = driver.find_element(By.XPATH,"//input[@id='add-to-cart-button']")
 add_to_cart.click()
 
+# To remove notification:
 
-continue_button = driver.find_element(By.XPATH, "//span[@id='a-autoid-20-announce']")
-continue_button.click()
+# continue_button = driver.find_element(By.XPATH, "//span[@id='a-autoid-20-announce']")
+# continue_button.click()
 
 # cancel_button = driver.find_element(By.XPATH, "//button[@aria-label='Close']")
 # cancel_button.click()
 
+# no_thanks = driver.find_element(By.XPATH, "//span[@id='a-autoid-21-announce']")
+# no_thanks.click()
 
 #
 # cart_subtotal = driver.find_element(By.XPATH,  "//div[h1]")
