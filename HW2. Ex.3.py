@@ -16,14 +16,14 @@ cart = driver.find_element(By.XPATH,"//a[@id='nav-cart']")
 cart.click()
 
 
-empty_cart= driver.find_element(By.XPATH,"//div[h2]")
+empty_cart= driver.find_element(By.XPATH,"//div[@class='a-row sc-your-amazon-cart-is-empty']//h2")
 
 
 
 
 
-# assert 'Your Shopping Cart is empty' in empty_cart.text, \
-#     f'Expected \Your Shopping Cart is empty', but got {empty_cart.text}'
+assert 'Your Amazon Cart is empty' in empty_cart.text, \
+    f'Expected Your Amazon Cart is empty, but got {empty_cart.text}'
 
 
 
