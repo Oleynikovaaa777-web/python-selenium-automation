@@ -7,7 +7,7 @@ from time import sleep
 SEARCH_INPUT = (By.NAME, '_nkw')
 SEARCH_SUBMIT = (By.ID, 'gh-btn')
 RESULTS_FOUND_MESSAGE = (By.XPATH, "//div[@class='srp-river-results clearfix']")
-RESULTS = (By.XPATH, "// ")
+RESULTS = (By.XPATH, "//$x("//span[text()='Apple iPhone 8 (Factory Unlocked) Verizon AT&amp']")
 
 
 @given('Open Ebay page')
