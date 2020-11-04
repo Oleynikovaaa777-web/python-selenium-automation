@@ -138,9 +138,10 @@ from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 
 # open the url
-driver.get('https://www.amazon.com//')
+url = "https://www.amazon.com//"
+driver.get(url)
 
-
-Return_Orders_Button = driver.find_element(By.XPATH,"//*[text()='Returns']")
+returns = "//*[text()='Returns']"
+Return_Orders_Button = driver.find_element(By.XPATH,returns)
 Return_Orders_Button.click()
 

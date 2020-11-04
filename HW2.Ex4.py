@@ -47,7 +47,7 @@ add_to_cart.click()
 #
 #
 # assert 'Added to Cart' in cart_subtotal.text, \
-#     f'Expected \Your Shopping Cart is empty, but got {cart_subtotal.text}'
+#     f'Expected Added to Cart, but got {cart_subtotal.text}'
 
 
 
