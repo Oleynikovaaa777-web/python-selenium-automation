@@ -8,7 +8,8 @@ SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
 SEARCH_BUTTON = (By.ID, 'nav-search-submit-text')
 LEGO_HARRY = (By.CSS_SELECTOR, '#anonCarousel1 .a-section .a-size-mini .a-link-normal')
 ADD_TO_CART = (By.ID, 'add-to-cart-button')
-FIRST_ITEM = (By.XPATH, "//img[@alt='LEGO Super Mario Adventures with Mario Starter Course 71360 Building Kit, Interactive Set Featuring Mario, Bowser Jr. and ...']")
+FIRST_ITEM = (By.XPATH, "//div[contains(@class,'s-result-list')]/div[@data-asin!=''][1]")
+RESULT = (By.XPATH, "//span[@id='productTitle']")
 #######################
 
 
@@ -35,16 +36,13 @@ def click_search_icon(context):
 
 @then('Choose a first item in result list')
 def click_first_item(context):
-    context.driver.find_element(*LEGO_HARRY).click()
     sleep(1)
 
-@then('Check in title that first item will be lego text')
-def contains_lego(context):
     context.driver.find_element(*FIRST_ITEM).click()
     sleep(1)
-    assert 'lego' in FIRST_ITEM, "Expected word '{}' in message, but got '{}'".format('lego', FIRST_ITEM)
 
-
-
-
+@then('Check in title o first item will be lego text')
+def contains_lego(context):
+    res = context.driver.find_element(*RESULT).text
+    assert 'LEGO' in res, "Expected word '{}' in message, but got '{}'".format('LEGO', res)
 
