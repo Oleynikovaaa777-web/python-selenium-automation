@@ -1,6 +1,6 @@
-# Created by alinaoleynikova at 11/16/20
-Feature: # Enter feature name here
-  # Enter feature description here
-
-  Scenario: # Enter scenario name here
-    # Enter steps here
+## Created by alinaoleynikova at 11/16/20
+#Feature: Ebay_home_class
+#
+#  Scenario: Verify if Home link has active class
+#    Given Open Ebay page
+#    Then Check that Home link has active class
