@@ -2,8 +2,7 @@
 # from behave import given, when, then
 # from time import sleep
 #
-#
-#
+
 # HOME = (By.CSS_SELECTOR, '.hl-cat-nav__active')
 #
 #

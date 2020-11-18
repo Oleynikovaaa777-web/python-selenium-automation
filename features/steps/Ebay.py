@@ -2,13 +2,13 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
-
 #
-# SEARCH_INPUT = (By.NAME, '_nkw')
-# SEARCH_SUBMIT = (By.ID, 'gh-btn')
-# RESULTS_FOUND_MESSAGE = (By.XPATH, "//div[@class='srp-river-results clearfix']")
-# RESULTS = (By.XPATH, "//h3[@class='s-item__title']")
-
+# #
+# # SEARCH_INPUT = (By.NAME, '_nkw')
+# # SEARCH_SUBMIT = (By.ID, 'gh-btn')
+# # RESULTS_FOUND_MESSAGE = (By.XPATH, "//div[@class='srp-river-results clearfix']")
+# # RESULTS = (By.XPATH, "//h3[@class='s-item__title']")
+#
 
 @given('Open Ebay page')
 def open_ebay(context):
