@@ -1,8 +1,8 @@
-#
-# from selenium.webdriver.common.by import By
-# from behave import given, when, then
-# from time import sleep
-#
+
+from selenium.webdriver.common.by import By
+from behave import given, when, then
+from time import sleep
+
 #
 # SEARCH_INPUT = (By.NAME, '_nkw')
 # SEARCH_SUBMIT = (By.ID, 'gh-btn')
@@ -10,10 +10,10 @@
 # RESULTS = (By.XPATH, "//h3[@class='s-item__title']")
 
 
-# @given('Open Ebay page')
-# def open_ebay(context):
-#     context.driver.get('https://www.ebay.com/')
-#
+@given('Open Ebay page')
+def open_ebay(context):
+    context.driver.get('https://www.ebay.com/')
+
 #
 # @when('Input {search_word} into search field')
 # def input_search(context, search_word):
