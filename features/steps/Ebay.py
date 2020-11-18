@@ -9,10 +9,10 @@ from time import sleep
 # # RESULTS_FOUND_MESSAGE = (By.XPATH, "//div[@class='srp-river-results clearfix']")
 # # RESULTS = (By.XPATH, "//h3[@class='s-item__title']")
 #
-
-@given('Open Ebay page')
-def open_ebay(context):
-    context.driver.get('https://www.ebay.com/')
+#
+# @given('Open Ebay page')
+# def open_ebay(context):
+#     context.driver.get('https://www.ebay.com/')
 
 #
 # @when('Input {search_word} into search field')
