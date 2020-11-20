@@ -5,7 +5,7 @@ from time import sleep
 
 SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
 SEARCH_BUTTON = (By.ID, 'nav-search-submit-text')
-FANTASY_BOOK = (By.CSS_SELECTOR, '.a-section.aok-relative')
+FANTASY_BOOK = (By.CSS_SELECTOR, 'span.celwidget div.a-section.aok-relative.s-image-fixed-height')
 
 @given('Open Amazon page')
 def open_amazon(context):
@@ -32,11 +32,10 @@ def click_search_icon(context):
 
 @then('On result page should be {count_of_books} results')
 def count_books(context, count_of_books):
-        fantasy_book = context.driver.find_elements(*FANTASY_BOOK)
-        print(fantasy_books)
+        fantasy_books = context.driver.find_elements(*FANTASY_BOOK)
         print(len(fantasy_books))
         print(int(count_of_books))
-        # assert len(fantasy_books) == int(count_of_books)
+        assert len(fantasy_books) == int(count_of_books)
 
 
 
