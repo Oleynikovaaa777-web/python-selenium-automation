@@ -27,10 +27,36 @@ def click_search_icon(context):
     click_icon = context.driver.find_element(*SEARCH_BUTTON)
     click_icon.click()
     sleep(6)
+#
+# @when('Find all prices')
+# def observe_all_prices(context):
+#     all_prices = context.driver.find_elements(*ALL_PRICES)
+#     print(len(all_prices))
+#     count = 0
+#     for x in all_prices:
+#         y = (int(x.text))
+#         # print(y)
+#         if y > 20:
+#             count +=1
+#             print(y)
+#     print(count)
 
-@when('Find all prices')
-def observe_all_prices(context):
-    all_prices = context.driver.find_elements(*ALL_PRICES)
+
+        # print(count)
 
 
-@then('Count how many books expensive then 20$')
+
+# @then('Count how many books expensive then 20$')
+# def count_books(context):
+#
+# count = 0
+#
+#
+#
+#
+#
+# for price in all_prices:
+#         if int(price) > 20:
+#             count += 1
+#     print(price)
+#     print(count)

@@ -8,4 +8,4 @@ Feature: # Enter feature name here
     When Input fantasy book into search field
     And Click on search icon
     And Find all prices
-    Then Count how many books expensive then 20$
+#    Then Count how many books expensive then 20$

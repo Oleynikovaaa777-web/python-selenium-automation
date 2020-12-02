@@ -50,7 +50,8 @@
 #
 # @then('Choose a first item in result list')
 # def click_first_item(context):
-#     context.driver.find_element(*LEGO_HARRY).click()
+#     first_item = context.driver.find_element(*LEGO_HARRY)
+#     first_item.click()
 #     sleep(1)
 #
 # @then('Add it to cart')
