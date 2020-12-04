@@ -25,19 +25,19 @@ def input_search(context, search_word):
     search = context.driver.find_element(*SEARCH_INPUT)
     search.clear()
     search.send_keys(search_word)
-    sleep(4)
+    sleep(5)
 
 
 @when('Click on search icon')
 def click_search_icon(context):
     context.driver.find_element(*SEARCH_SUBMIT).click()
-    sleep(1)
+    sleep(5)
 
 @when('Count items with label Fast/n free')
 def count_items(context):
     count_fast_free = context.driver.find_elements(*FAST_FREE)
     print(len(count_fast_free))
-
+    sleep(5)
 
 
 
