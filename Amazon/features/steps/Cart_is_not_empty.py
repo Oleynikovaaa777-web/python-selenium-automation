@@ -26,20 +26,20 @@ def click_first_item(context):
     sleep(4)
 
 
-@when ('Add it to cart')
-def add_to_cart(context):
-    add_it_to_cart = context.driver.find_element(*ADD_TO_CART)
-    results = [True, False]
-    if choice(results):
-        add_it_to_cart.click()
-    sleep(4)
+# @when ('Add it to cart')
+# def add_to_cart(context):
+#     add_it_to_cart = context.driver.find_element(*ADD_TO_CART)
+#     results = [True, False]
+#     if choice(results):
+#         add_it_to_cart.click()
+#     sleep(4)
 
 
-@when ('Click to Cart icon')
-def cart_icon(context):
-    cart = context.driver.find_element(*CART_ICON)
-    cart.click()
-    sleep(3)
+# @when ('Click to Cart icon')
+# def cart_icon(context):
+#     cart = context.driver.find_element(*CART_ICON)
+#     cart.click()
+#     sleep(3)
 
 
 
@@ -52,8 +52,8 @@ def check_cart_is_empty(context):
 
 
 
-@then ('Check cart is empty')
-def check_is_not_empty(context):
-    empty_element = context.driver.find_element(*EMPTY)
-    assert 'Your Amazon Cart is empty' in empty_element.text, \
-        f'Expected Your Amazon Cart is empty, but got {empty_element.text}'
+# @then ('Check cart is empty')
+# def check_is_not_empty(context):
+#     empty_element = context.driver.find_element(*EMPTY)
+#     assert 'Your Amazon Cart is empty' in empty_element.text, \
+#         f'Expected Your Amazon Cart is empty, but got {empty_element.text}'

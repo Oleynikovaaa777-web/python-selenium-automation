@@ -4,6 +4,10 @@ from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
 
+
+SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
+SEARCH_BUTTON = (By.ID, 'nav-search-submit-text')
+
 @given('Open Amazon page')
 def open_amazon(context):
     context.driver.get('https://www.amazon.com/')

@@ -13,18 +13,18 @@ RESULTS = (By.XPATH, "//h3[@class='s-item__title']")
 
 
 
-@when('Input {search_word} into search field')
-def input_search(context, search_word):
-    search = context.driver.find_element(*SEARCH_INPUT)
-    search.clear()
-    search.send_keys(search_word)
-    sleep(4)
+# @when('Input {search_word} into search field')
+# def input_search(context, search_word):
+#     search = context.driver.find_element(*SEARCH_INPUT)
+#     search.clear()
+#     search.send_keys(search_word)
+#     sleep(4)
 
 
-@when('Click on search icon')
-def click_search_icon(context):
-    context.driver.find_element(*SEARCH_SUBMIT).click()
-    sleep(1)
+# @when('Click on search icon')
+# def click_search_icon(context):
+#     context.driver.find_element(*SEARCH_SUBMIT).click()
+#     sleep(1)
 
 
 @then('Product results for {search_word} are shown')

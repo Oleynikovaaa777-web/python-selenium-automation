@@ -5,7 +5,7 @@ Feature: # Enter feature name here
   Scenario: # Enter scenario name here
     # Enter steps here
     Given Open Ebay page
-    When Search for playstation 5
+    When Input playstation 5 into search field
     And Click on search icon
     And Count items with label Fast/n free
     And Open first item result

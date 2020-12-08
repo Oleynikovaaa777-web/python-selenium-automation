@@ -7,6 +7,6 @@ Feature: # Enter feature name here
     And Click on search button
     And Choose a first item in result list
     And Add it to cart
-    And Click to Cart icon
+    And Click on cart icon
     And If cart is not empty - delete item and check cart is empty
-    Then Check cart is empty
+    Then Verify that Cart is empty

@@ -30,13 +30,13 @@ def cart_is_empty(context):
 
 
 
-@then('Choose a first item in result list')
-def click_first_item(context):
-    context.driver.find_element(*LEGO_HARRY).click()
+# @then('Choose a first item in result list')
+# def click_first_item(context):
+#     context.driver.find_element(*LEGO_HARRY).click()
+#
+#     sleep(4)
 
-    sleep(4)
-
-@then('Add it to cart')
+@when('Add it to cart')
 def add_to_cart(context):
     context.driver.find_element(*ADD_TO_CART).click()
     sleep(1)

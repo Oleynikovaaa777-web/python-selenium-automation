@@ -13,11 +13,11 @@ FANTASY_BOOK = (By.CSS_SELECTOR, 'span.celwidget div.a-section.aok-relative.s-im
 def search_fantasy_book(context):
     context.driver.find.element(*SEARCH_FIELD)
 
-
-@when('Click on search icon')
-def click_search_icon(context):
-    context.driver.find_element(*SEARCH_BUTTON).click()
-    sleep(6)
+#
+# @when('Click on search icon')
+# def click_search_icon(context):
+#     context.driver.find_element(*SEARCH_BUTTON).click()
+#     sleep(6)
 
 
 

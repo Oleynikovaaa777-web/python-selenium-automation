@@ -6,5 +6,5 @@
     Given Open amazon page
     When Input lego into search field
     When Click on search button
-    Then Choose a first item in result list
-    Then Check in title o first item will be lego text
+    Then Choose first item in result list
+    Then Check in title first item will be lego text

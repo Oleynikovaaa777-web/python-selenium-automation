@@ -14,14 +14,12 @@ RESULT = (By.XPATH, "//span[@id='productTitle']")
 
 
 
-@then('Choose a first item in result list')
+@then('Choose first item in result list')
 def click_first_item(context):
-    sleep(1)
-
     context.driver.find_element(*FIRST_ITEM).click()
     sleep(1)
 
-@then('Check in title o first item will be lego text')
+@then('Check in title first item will be lego text')
 def contains_lego(context):
     res = context.driver.find_element(*RESULT).text
     assert 'LEGO' in res, "Expected word '{}' in message, but got '{}'".format('LEGO', res)

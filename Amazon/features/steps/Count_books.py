@@ -5,8 +5,7 @@ from time import sleep
 SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
 SEARCH_BUTTON = (By.ID, 'nav-search-submit-text')
 FANTASY_BOOK = (By.CSS_SELECTOR, 'span.celwidget div.a-section.aok-relative.s-image-fixed-height')
-ALL_PRICES = (By.XPATH,
-              "//div[@data-component-type='s-search-result']//div[contains(@class, 'a-spacing-top-small')]//span[contains(@class, 'a-price-whole')]")
+ALL_PRICES = (By.XPATH, "//div[@data-component-type='s-search-result']//div[contains(@class, 'a-spacing-top-small')]//span[contains(@class, 'a-price-whole')]")
 
 
 

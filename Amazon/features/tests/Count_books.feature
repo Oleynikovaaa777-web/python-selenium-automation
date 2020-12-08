@@ -6,6 +6,6 @@ Feature: # Enter feature name here
     # Enter steps here
     Given Open Amazon page
     When Input fantasy book into search field
-    Click on search button
+    When Click on search button
     And Find all prices
     Then Count how many books expensive then 20$

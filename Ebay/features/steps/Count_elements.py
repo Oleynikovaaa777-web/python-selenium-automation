@@ -15,23 +15,28 @@ CART_1 = (By.XPATH, '//h1[contains(text(), "Shopping cart (1 item)")]')
 
 
 
-@given('Open Ebay page')
-def open_ebay(context):
-    context.driver.get('https://www.ebay.com/')
+# @given('Open Ebay page')
+# def open_ebay(context):
+#     context.driver.get('https://www.ebay.com/')
+
+# @when('Input {search_word} into search field')
+# def input_search(context, search_word):
+#     search = context.driver.find_element(*SEARCH_INPUT)
+#     search.clear()
+#     search.send_keys(search_word)
+#     sleep(4)
+# @when('Search for {search_word}')
+# def input_search(context, search_word):
+#     search = context.driver.find_element(*SEARCH_INPUT)
+#     search.clear()
+#     search.send_keys(search_word)
+#     sleep(5)
 
 
-@when('Search for {search_word}')
-def input_search(context, search_word):
-    search = context.driver.find_element(*SEARCH_INPUT)
-    search.clear()
-    search.send_keys(search_word)
-    sleep(5)
-
-
-@when('Click on search icon')
-def click_search_icon(context):
-    context.driver.find_element(*SEARCH_SUBMIT).click()
-    sleep(5)
+# @when('Click on search icon')
+# def click_search_icon(context):
+#     context.driver.find_element(*SEARCH_SUBMIT).click()
+#     sleep(5)
 
 @when('Count items with label Fast/n free')
 def count_items(context):

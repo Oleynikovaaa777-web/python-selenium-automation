@@ -17,9 +17,9 @@ CART_COUNTER = (By.ID, 'nav-cart-count')
 
 
 
-
-@then('Verify that Cart is empty')
-def cart_is_empty(context):
-    result_empty = context.driver.find_element(*EMPTY).text
-    print('\n{}'.format(result_empty))
-    assert 'empty' in result_empty, "Expected word '{}' in message, but got '{}'".format('empty', result_empty)
+#
+# @then('Verify that Cart is empty')
+# def cart_is_empty(context):
+#     result_empty = context.driver.find_element(*EMPTY).text
+#     print('\n{}'.format(result_empty))
+#     assert 'empty' in result_empty, "Expected word '{}' in message, but got '{}'".format('empty', result_empty)

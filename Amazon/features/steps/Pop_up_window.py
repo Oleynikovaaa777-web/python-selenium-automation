@@ -17,7 +17,7 @@ POPUP = (By.ID, 'siAddCoverage-announce')
 
 
 
-@when ('Choose first result')
+@when ('Choose first computer screen result')
 def first_result(context):
     f_result = context.driver.find_element(*COMPUTER_SCREEN)
     f_result.click()
@@ -27,12 +27,12 @@ def first_result(context):
 
 
 
-@when ('Add it to cart')
-def add_to_cart(context):
-    add_cart = context.driver.find_element(*ADD_TO_CART)
-    add_cart.click()
-    sleep(3)
-
+# @when ('Add it to cart')
+# def add_to_cart(context):
+#     add_cart = context.driver.find_element(*ADD_TO_CART)
+#     add_cart.click()
+#     sleep(3)
+#
 
 
 
