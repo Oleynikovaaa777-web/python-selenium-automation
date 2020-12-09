@@ -9,6 +9,7 @@ SEARCH_SUBMIT = (By.ID, 'gh-btn')
 @given('Open Ebay page')
 def open_ebay(context):
     context.driver.get('https://www.ebay.com/')
+    sleep(3)
 
 @when('Input {search_word} into search field')
 def input_search(context, search_word):
@@ -20,4 +21,4 @@ def input_search(context, search_word):
 @when('Click on search icon')
 def click_search_icon(context):
     context.driver.find_element(*SEARCH_SUBMIT).click()
-    sleep(1)
+    sleep(3)

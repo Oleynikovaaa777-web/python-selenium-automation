@@ -1,25 +1,26 @@
 from behave import given, when, then
 from time import sleep
 
-@when('Save current window')
-def current_window(context):
-    origin_window = context.driver.current_window_handle
-    context.origin_window = origin_window
 
-
-
-@when('Open new window')
-def open_new_window(context):
-    context.driver.execute_script("window.open('');")
-
-
-@when('Switch to new window')
-def switch_to_new_window(context):
-    windows = context.driver.window_handles
-    for window in windows:
-        if window != context.origin_window:
-            context.driver.switch_to.window(window)
-            break
+# @when('Save current window')
+# def current_window(context):
+#     origin_window = context.driver.current_window_handle
+#     context.origin_window = origin_window
+#
+#
+#
+# @when('Open new window')
+# def open_new_window(context):
+#     context.driver.execute_script("window.open('');")
+#
+#
+# @when('Switch to new window')
+# def switch_to_new_window(context):
+#     windows = context.driver.window_handles
+#     for window in windows:
+#         if window != context.origin_window:
+#             context.driver.switch_to.window(window)
+#             break
 
 
 
