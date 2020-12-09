@@ -11,6 +11,12 @@ def open_ebay(context):
     context.driver.get('https://www.ebay.com/')
     sleep(3)
 
+@when('Open Ebay page')
+def open_ebay(context):
+    context.driver.get('https://www.ebay.com/')
+    sleep(3)
+
+
 @when('Input {search_word} into search field')
 def input_search(context, search_word):
     search = context.driver.find_element(*SEARCH_INPUT)

@@ -10,11 +10,11 @@ Feature: # Enter feature name here
     And Open another window
     And Switch to new window
     And Open Ebay page
-    And Input iPhone into search field
+    And Input lamp into search field
+    And Click on search icon
     And Choose device
     And Add to cart
     And Close pop window
     And Close window 2 and switch to window 1
-    And Refresh window and check now cart includes iPhone
-    And Go to cart
-    And Check if cart contains iPhone
+    And Refresh window and check now cart includes lamp
+    And Check if cart contains lamp
