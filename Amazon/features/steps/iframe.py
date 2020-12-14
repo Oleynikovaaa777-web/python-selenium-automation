@@ -112,14 +112,30 @@ def close_popup(context):
     sleep(4)
 
 
-# @when('Close new window and switch no previous one')
+@when('Close new window and switch on previous one')
+def close_window(context):
+    context.driver.close()
+    context.driver.switch_to.window(context.origin_window)
+    print(context.driver.current_window_handle)
+    sleep(2)
+
 #
+
 #
-#
-#
-# @when('Refresh page')
-#
-#
-#
-#
-# @when('Check cart now is not empty')
+@when('Refresh page')
+def refresh_page(context):
+    context.driver.refresh()
+    sleep(4)
+
+
+
+
+@then('Check cart now is not empty')
+def not_empty_cart(context):
+    not_empty = context.driver.find_element(*CART_NOT_EMPTY).text
+    assert '1 item' in not_empty
+
+
+
+
+

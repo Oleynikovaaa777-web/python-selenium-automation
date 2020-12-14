@@ -13,6 +13,7 @@ Feature: # Enter feature name here
     And Choose first item
     And Add to cart
     And Close popup window
-#    And Close new window and switch no previous one
-#    And Refresh page
-#    Then Check cart now is not empty
+    And Close new window and switch on previous one
+    And Refresh page
+    When Go to cart
+    Then Check cart now is not empty
