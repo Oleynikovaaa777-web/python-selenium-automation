@@ -28,7 +28,7 @@ from time import sleep
 def make_some_manipulations(context):
     context.driver.get('https://www.ebay.com')
     print(context.driver.current_window_handle)
-    sleep(4)
+
 
 
 @then('Switch to origin window')

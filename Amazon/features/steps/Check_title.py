@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
+from selenium.webdriver.support import expected_conditions as EC
 
 
 
@@ -16,11 +17,15 @@ RESULT = (By.XPATH, "//span[@id='productTitle']")
 
 @then('Choose first item in result list')
 def click_first_item(context):
-    context.driver.find_element(*FIRST_ITEM).click()
-    sleep(1)
+    item = context.wait.until(EC.visibility_of_element_located(FIRST_ITEM))
+    item.click()
+
+
 
 @then('Check in title first item will be lego text')
 def contains_lego(context):
-    res = context.driver.find_element(*RESULT).text
-    assert 'LEGO' in res, "Expected word '{}' in message, but got '{}'".format('LEGO', res)
+    # res = context.driver.find_element(*RESULT).text
+    res = context.wait.until(EC.visibility_of_element_located(RESULT))
+    res_text = res.text
+    assert 'LEGO' in res_text, "Expected word '{}' in message, but got '{}'".format('LEGO', res_text)
 

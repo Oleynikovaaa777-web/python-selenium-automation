@@ -19,9 +19,10 @@ POPUP = (By.ID, 'siAddCoverage-announce')
 
 @when ('Choose first computer screen result')
 def first_result(context):
-    f_result = context.driver.find_element(*COMPUTER_SCREEN)
+    # f_result = context.driver.find_element(*COMPUTER_SCREEN)
+    f_result = context.wait.until(EC.visibility_of_element_located(COMPUTER_SCREEN))
     f_result.click()
-    sleep(2)
+
 
 
 

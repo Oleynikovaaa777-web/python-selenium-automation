@@ -125,7 +125,6 @@ def close_window(context):
 @when('Refresh page')
 def refresh_page(context):
     context.driver.refresh()
-    sleep(4)
 
 
 

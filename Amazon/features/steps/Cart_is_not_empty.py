@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
 from random import choice
+from selenium.webdriver.support import expected_conditions as EC
 
 CART_ICON = (By.ID, 'nav-cart')
 EMPTY = (By.CSS_SELECTOR, '.sc-your-amazon-cart-is-empty h2')
@@ -21,9 +22,10 @@ DELETE_ITEM = (By.XPATH, '//input[@data-action="delete"]')
 
 @when('Choose a first item in result list')
 def click_first_item(context):
-    first_item = context.driver.find_element(*FIRST_ELEMENT)
+    # first_item = context.driver.find_element(*FIRST_ELEMENT)
+    first_item = context.wait.until(EC.visibility_of_element_located(FIRST_ELEMENT))
     first_item.click()
-    sleep(4)
+
 
 
 # @when ('Add it to cart')

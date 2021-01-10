@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
+from selenium.webdriver.support import expected_conditions as EC
 
 
 CART_ICON = (By.ID, 'nav-cart')
@@ -15,8 +16,12 @@ CART_ONE = (By.XPATH, "//span[@class = 'nav-cart-count nav-cart-1']")
 
 @when('Click on Cart icon')
 def click_on_cart(context):
-    context.driver.find_element(*CART_ICON).click()
-    sleep(1)
+    # context.driver.find_element(*CART_ICON).click()
+    cart = context.wait.until(EC.visibility_of_element_located(CART_ICON))
+    cart.click()
+
+
+
 
 
 @then('Verify that Cart is empty')
@@ -38,12 +43,14 @@ def cart_is_empty(context):
 
 @when('Add it to cart')
 def add_to_cart(context):
-    context.driver.find_element(*ADD_TO_CART).click()
-    sleep(1)
+    # context.driver.find_element(*ADD_TO_CART).click()
+    add = context.wait.until(EC.visibility_of_element_located(ADD_TO_CART))
+    add.click()
+
 
 @then('Verify that result contains 1')
 def added_to_cart(context):
-    result = context.driver.find_element(*CART_ONE).text
+    result = context.wait.until(EC.visibility_of_element_located(CART_ONE)).text
     print('\n{}'.format(result))
     assert result in '1'
 
